@@ -1,0 +1,32 @@
+<div class="row">
+	<div class="col-md-12">
+		<ul class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Urutkan Berdasarkan <span class="caret"></span></a>
+			  <ul class="dropdown-menu">
+			    <li><a href="/?search={{search}}&sort=name&order=asc">Abjad A-Z</a></li>
+			    <li><a href="/?search={{search}}&sort=name&order=desc">Abjad Z-A</a></li>
+			    <li><a href="/?search={{search}}&sort=price&order=desc">Harga Tertingi</a></li>
+			    <li><a href="/?search={{search}}&sort=price&order=asc">Harga Terendah</a></li>
+			  </ul>
+			</li>
+		</ul>	
+	</div>
+	
+</div>
+<div class="row">
+	
+	{{#each products}}
+	<div class="col-md-4">
+		<div class="products-list-wrap">
+			<a href="{{../baseUrl}}/detail/{{sku}}/{{slugify name}}">
+				<img src="http://placehold.it/400x300" alt="{{name}}" class="img-rounded product-img"/>
+			</a>
+			<h5><a href="{{../baseUrl}}/detail/{{sku}}/{{slugify name}}">{{shortener name}}</a></h5>
+			<span>sku : {{sku}}</span><br/>
+			<span>Price : {{currency price}}</span>
+		</div>
+	</div>
+	{{/each}}
+</div>
+

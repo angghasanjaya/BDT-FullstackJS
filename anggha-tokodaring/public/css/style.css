@@ -1,0 +1,18 @@
+body{
+}
+
+#container{
+	margin-top: 50px;
+	padding-top: 50px;
+	background-color: #fafafa;
+}
+
+.products-list-wrap{
+	background-color: #fff;
+	padding: 10px 20px;
+	margin-bottom: 10px;
+}
+
+.products-list-wrap .product-img,.products-detail .product-img{
+	width: 100%;
+}

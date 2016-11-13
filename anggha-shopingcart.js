@@ -66,6 +66,7 @@ class ProductManagerBase{
 		console.log(this.products);
 		return this.products;
 	}
+	
 	getProduct(sku){
 		return this.products.find((item)=>{
 			if(item.sku==sku){
@@ -74,13 +75,13 @@ class ProductManagerBase{
 		});
 		
 	}
+
 	removeProduct(sku){
 		var idx=this.products.findIndex(ele => ele.sku==sku);
 		//return;
 		if(idx>-1){
 			this.products.splice(idx,1);	
-			console.log("Product's been removed");
-			console.log(this.products);
+			console.log("Product's been removed \n ".this.products);
 		}else{
 			console.log("Sku : '"+sku+"'' not found");
 		}	
@@ -112,8 +113,7 @@ class Cart{
 		var idx=this.orderLineItems.findIndex(ele => ele.product.sku==sku);
 		if(idx>-1){
 			this.orderLineItems.splice(idx,1);	
-			console.log("Order line's been removed");
-			console.log(this.orderLineItems);
+			console.log("Order line's been removed \n"+this.orderLineItems);
 		}else{
 			console.log("Sku : '"+sku+"'' not found");
 		}	
@@ -170,3 +170,4 @@ myCart.addOrder(order2);
 var bookData=new bookManager();
 bookData.addProduct(myBook);
 bookData.addProduct(myBook2);
+
